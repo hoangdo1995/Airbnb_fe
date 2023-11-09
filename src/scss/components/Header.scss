@@ -1,0 +1,42 @@
+.header{
+    padding: 1.3em 0;
+    .icon{
+        img{
+            width: 2.5em;
+        }
+        .brand-title{
+            @include textStyle($fs-5,$fw-bold,var(--color-primary));
+            
+        }
+    }
+    .searchBar{
+        @import './SearchBar.scss';
+    }
+    .navBar{
+        div.btn{
+            padding: 5px 13px;
+            i{
+
+            }
+            .avatar{
+                img{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .dropdown-menu{
+            .content{
+                a{
+                    padding: 3px 20px;
+                    text-decoration: none;
+                    @include textStyle($fs-2,$fw-semibold,var(--color-text-secondary));
+                    &:hover{
+                        background-color: var(--color-bg-gray);
+                    }
+                }
+            }
+        }
+    }
+}

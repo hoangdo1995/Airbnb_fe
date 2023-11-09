@@ -1,0 +1,70 @@
+.login{
+    width: 100%;
+    min-height:90vh;
+    background-image: url('../../../public/image/loginBg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    .content-login{
+        background-color: rgba(255, 255, 255, 0.601);
+        backdrop-filter: blur(20px);
+        min-width: 35vw;
+        margin-right: 200px;
+        border-radius: 8px;
+        .title{
+            h3{
+                @include textStyle($fs-6,$fw-semibold,var(--color-text-secondary));
+            }
+        }
+        .login-infor{
+            .login-content{
+                .input-item{
+                    margin:10px auto;
+                    min-width: 50%;
+                    .title-container{
+                        .title{
+                            
+                        }
+                        .error{
+                            @include textStyle($fs-1,$fw-light,var(--color-text-warning));
+                        }
+                    }
+                    input{
+                        border: none;
+                        border-bottom: 2px solid rgb(76, 75, 75);
+                        padding: 4px 10px;
+                        width: 100%;
+                        border-radius: 3px;
+                        &:focus{
+                            outline: none;
+                            border-bottom: 2px solid #1A77F2;
+                        }
+                    }
+                }
+                .submit{
+                    margin: 15px auto;
+                    .submit-btn{
+                        padding: 7px 50px;
+                        border: none;
+                        border-radius: 20px;
+                        color: white;
+                        background-color: var(--color-primary);
+                        &:hover{
+                            background-color: #1A77F2;
+                            transition: all .5s;
+                        }
+                        &:focus{
+                            background-color: green;
+                        }
+                    }
+                }
+                .login-facebook{
+                    @import '../components/FacebookLogin.scss';
+                }
+            }
+        }
+    }
+
+}

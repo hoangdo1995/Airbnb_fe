@@ -1,0 +1,10 @@
+.facebook-login-btn{
+    border: none;
+    padding: 10px 30px;
+    background-color: white;
+    border-radius: 50px;
+    @include textStyle($fs-2,$fw-semibold,var(--color-text-secondary));
+    i{
+        @include textStyle($fs-3,$fw-bold,#1A77F2)
+    }
+}

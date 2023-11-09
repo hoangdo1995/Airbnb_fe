@@ -1,0 +1,70 @@
+.baseHeaderButton{
+    padding: 5px 0px 5px 10px;
+    .content{
+        span{
+            padding: 0 10px;
+        }
+        span.text-gray{
+            color: $gray-color-1;
+        }
+        span.icon{
+            // padding: 0 !important;
+            i{
+                background-color: var(--color-primary);
+                padding: 10px;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+.searchNav{
+    .nav{
+        button{
+        }
+    }
+    .toolBar{
+        margin-top: 10px;
+        border: 1px solid var(--color-border-primary);
+        border-radius: 50px;
+        .toolBut{
+            padding: 10px 20px;
+            border-radius: 50px;
+            position: relative;
+            cursor: pointer;
+            .content{
+                display: flex;
+                flex-direction: column;
+                margin-right: 0;
+                padding-left: 10px;
+                span:first-of-type{
+                    @include textStyle($fs-1,$fw-semibold,$text-primary-color);
+                    letter-spacing: 1px;
+                }
+                span:last-of-type{
+                    @include textStyle($fs-1,$fw-light,$text-primary-color);
+                }
+            }
+            &:hover{
+                background-color: var(--color-hover-default);
+            }
+            
+        }
+        .dropdown-menu{
+            position: absolute;
+            top: 0px;
+            padding: 0;
+        }
+
+        .toolSubmit{
+            button{
+                background-color: var(--color-primary);
+                border: none;
+                padding:8px 15px;
+                border-radius: 20px;
+                @include textStyle($fs-3,$fw-semibold);
+                i{
+                }
+            }
+        }
+    }
+}

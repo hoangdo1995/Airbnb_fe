@@ -1,0 +1,58 @@
+$primary-color:#ff395c;
+$text-primary-color:#222222;
+$text-secondary-color:#3b3b3b;
+$gray-color-1:#888888;
+$gray-color-2:#e0e0e0;
+$gray-color-3:#efeeee;
+$light-color:rgb(252, 247, 247);
+$warning-color-primary:rgb(227, 13, 13);
+
+body{
+    --color-primary:#{$primary-color};
+    --color-text-primary:#{$text-primary-color};
+    --color-text-secondary:#{$text-secondary-color};
+    --color-text-gray:#{$gray-color-1};
+    --color-text-light:#{$light-color};
+    --color-text-warning:#{$warning-color-primary};
+    --color-border-primary:#{$gray-color-1};
+    --color-bg-gray:#{$gray-color-2};
+    
+    --color-hover-default:#{$gray-color-3};
+}
+
+$fontWeight: ("lighter":100, "light":300, "normal":400, "semibold":500, "bold":700, "bolder":800);
+
+@each $key,$value in $fontWeight {
+    .fw-#{$key}{
+        font-weight: $value;
+    }
+}
+
+$fw-lighter:100;
+$fw-light:300;
+$fw-normal:400;
+$fw-semibold:500;
+$fw-bold:700;
+$fw-bolder:800;
+
+$fs:("1":14px,"2":16px,"3":18px,"4":20px,"5":24px,"6":30px);
+
+@each $key,$value in $fs{
+    .fs-#{$key}{
+        font-size:#{$value};
+    }
+}
+
+$fs-1:14px;
+$fs-2:16px;
+$fs-3:18px;
+$fs-4:20px;
+$fs-5:24px;
+$fs-6:30px;
+
+//Mixin
+@mixin textStyle($fs,$fw,$color:#{$text-primary-color}){
+    font-size: $fs;
+    font-weight: $fw;
+    color:$color;
+}

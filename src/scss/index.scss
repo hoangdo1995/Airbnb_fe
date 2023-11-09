@@ -1,0 +1,17 @@
+@import './helps/help.scss';
+@import './utils/default.scss';
+
+.main{
+    .header-container{
+        border-bottom: 2px solid $gray-color-2;
+        @import './components/Header.scss';
+    }
+    .body-container{
+        min-height: 70vh;
+        @import './pages/loginPage.scss';
+    }
+    .footer-container{
+        border-top: 1px solid var(--color-text-gray);
+        @import './components/Footer.scss';
+    }
+}

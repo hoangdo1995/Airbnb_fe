@@ -1,0 +1,66 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box
+}
+
+.baseHeaderNavLink{
+    @include textStyle($fs-2,$fw-semibold);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 20px;
+    &:hover{
+        background-color: var(--color-hover-default);
+    }
+}
+
+.searchNavLink{
+    text-decoration: none;
+    margin: 0 10px;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    @include textStyle($fs-3,$fw-normal,var(--color-text-secondary));
+    &:hover{
+        @extend .underLineGray;
+    }
+}
+
+.baseHeaderButton{
+    border: 1px solid $gray-color-1;
+    border-radius:40px;
+    
+    &:hover{
+        box-shadow: 2px 3px 6px 1px rgba(102,102,102,0.75);
+        cursor: pointer;
+    }
+}
+
+.underLineBlack{
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0px;
+        width: 100%;
+        background-color: var(--color-text-primary);
+        height: 2px;
+    }
+}
+
+.underLineGray{
+    &::after{
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0px;
+        width: 100%;
+        background-color: var(--color-text-gray);
+        height: 2px;
+    }
+}
+
+//boostrap default
+.dropdown-toggle::after {
+    display: none; /* Ẩn icon mũi tên xuống */
+  }

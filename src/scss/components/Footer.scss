@@ -1,0 +1,40 @@
+.footer{
+    .link{
+        padding-top: 30px;
+        padding-bottom: 50px;
+        .link-item{
+            h3{
+                @include textStyle($fs-3,$fw-semibold,var(--color-text-primary));
+            }
+            a{
+                @include textStyle($fs-3,$fw-light,var(--color-text-gray));
+                margin-bottom: 5px;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .contact{
+        .contact-item{
+            a{
+                @include textStyle($fs-2,$fw-light,var(--color-text-gray));
+                margin-right: 20px;
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+            a.dot{
+                &::before{
+                    content: '\22C5';
+                    font-size: 20px;
+                    font-weight: 900;
+                    margin-right: 5px;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
